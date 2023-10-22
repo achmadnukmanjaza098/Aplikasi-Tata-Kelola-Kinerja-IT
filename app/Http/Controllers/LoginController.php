@@ -15,7 +15,7 @@ class LoginController extends Controller
             return redirect('home');
         } else {
             // Jika belum terotentikasi, tampilkan halaman "login".
-            return view('login');
+            return view('login/login');
         }
     }
 
@@ -23,7 +23,7 @@ class LoginController extends Controller
     {
         // Ambil alamat username dan kata sandi dari permintaan yang diterima.
         $userPass = [
-            'username' => $request->input('username'),
+            'email' => $request->input('email'),
             'password' => $request->input('password'),
         ];
 
